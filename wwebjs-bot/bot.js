@@ -92,7 +92,7 @@ class JunaidBot extends AbstractWhatsappBot {
   async sendBulkMessages() {
     console.log("Sending bulk messages...");
 
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 20; i++) {
       if (this.isStopNeeded) break;
 
       try {
@@ -120,12 +120,12 @@ class JunaidBot extends AbstractWhatsappBot {
     await this.client.sendMessage(this.chatId, "മാതൃക");
 
     // Uncomment and send PDF if needed
-    // await this.client.sendMessage(
-    //   this.chatId,
-    //   MessageMedia.fromFilePath(
-    //     "E:\\work\\whatsbot\\wwebjs-bot\\junaidfile\\TransferReceipt_20240310224034.pdf"
-    //   )
-    // );
+    await this.client.sendMessage(
+      this.chatId,
+      MessageMedia.fromFilePath(
+        "E:\\work\\whatsbot\\wwebjs-bot\\junaidfile\\TransferReceipt_20240310224034.pdf"
+      )
+    );
 
     await this.client.sendMessage(this.chatId, "സമയം");
 
